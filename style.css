@@ -1,7 +1,7 @@
 /* Global */
 :root {
   --color-white: #ffffff;
-  --color-light-white: #bbddbb;
+  --color-light-white: #f1f1f1;
   --color-bg-light: #2b2747;
   --color-bg-dark: #030326;
   --color-light-puple: #b39ddb;
@@ -28,4 +28,33 @@
 /* Universal tags  */
 * {
   box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-light-gray);
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-dark-gray);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-light-white);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-light-white);
+  margin: 4px 0;
 }
