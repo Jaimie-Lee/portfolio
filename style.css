@@ -1,0 +1,31 @@
+/* Global */
+:root {
+  --color-white: #ffffff;
+  --color-light-white: #bbddbb;
+  --color-bg-light: #2b2747;
+  --color-bg-dark: #030326;
+  --color-light-puple: #b39ddb;
+  --color-dark-gray: #a7afc4;
+  --color-light-gray: #bdbcd3;
+
+  /* Font size */
+
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+}
+
+/* Universal tags  */
+* {
+  box-sizing: border-box;
+}
