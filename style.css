@@ -36,6 +36,9 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
   cursor: default;
+  background: url("imgs/bg-img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -44,8 +47,18 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -81,14 +94,15 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-bg-medium);
+  background-color: var(--color-bg-dark);
   align-items: center;
   padding: 16px;
+  height: 150px;
 }
 
 .navbar__menu {
   display: flex;
-  color: var(--color-light-white);
+  color: var(--color-light-gray);
 }
 
 .navbar__logo {
@@ -122,4 +136,20 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-bg-light);
+}
+
+/* Home */
+#home {
+  margin-top: 400px;
+  padding: 40px;
+  text-align: center;
+}
+.home__contact {
+  color: var(--color-light-gray);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-dark-gray);
+  border-radius: var(--size-border-radius);
 }
