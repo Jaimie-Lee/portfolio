@@ -6,16 +6,17 @@
   --color-bg-medium: #030326d4;
   --color-bg-dark: #030326;
   --color-light-puple: #694e71;
+  --color-pupple: #b9a0ea;
+  --color-medium-puple: #553b5e;
   --color-dark-puple: #271d35;
   --color-dark-gray: #a7afc4;
   --color-light-gray: #bdbcd3;
   --color-gray: gray;
   --color-blue: #253279;
   --color-light-blue: #9ca8d6;
-  --color-medium-puple: #553b5e;
+  --color-dark-blue: #18164e;
   --color-light-peach: #bf8a82;
   --color-light-yello: #edc574;
-  --color-pupple: #b9a0ea;
 
   /* Font size */
 
@@ -90,14 +91,14 @@ h2 {
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--font-regular);
-  color: var(--color-light-white);
+  color: var(--color-dark-gray);
   margin: 8px 0;
 }
 
 p {
   font-size: var(--font-regular);
   font-weight: var(--font-regular);
-  color: var(--color-light-white);
+  color: var(--color-dark-gray);
   margin: 4px 0;
 }
 
@@ -151,7 +152,7 @@ p {
 
 /* Home */
 #home {
-  margin-top: 400px;
+  margin-top: 300px;
   padding: 40px;
   text-align: center;
 }
@@ -177,6 +178,10 @@ p {
   margin: auto;
 }
 /* About */
+
+#about p {
+  padding: 15px 30px;
+}
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -231,7 +236,11 @@ p {
 /* Skill */
 
 #skills {
-  background-color: var(--color-bg-medium);
+  background-color: var(--color-bg-dark);
+}
+
+#skills p {
+  padding: 25px 0;
 }
 
 .skillset {
@@ -279,4 +288,71 @@ p {
 }
 .etc {
   padding: 50px 0;
+}
+
+/* Work */
+
+#second-bg {
+  background: url("imgs/bg-img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.project {
+  position: relative;
+  width: 420px;
+  height: 340px;
+  margin: 10px;
+  background-color: var(--color-bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 15px;
+}
+
+.project__discription {
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project__discription {
+  opacity: 0.7;
+  transform: translateY(0px);
+}
+
+.project__discription span {
+  margin-bottom: 15px;
+}
+
+.project__discription h3::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: 8px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-dark-gray);
 }
