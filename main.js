@@ -3,7 +3,7 @@
 // Make navbar tranparent when it is scrolling
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener('scroll', ( )=>{
+document.addEventListener('scroll', ()=>{
     console.log(window.scrollY);
     if(window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
@@ -12,6 +12,7 @@ document.addEventListener('scroll', ( )=>{
         navbar.classList.remove('navbar--dark');
     }
 });
+
 
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -22,9 +23,19 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
 
+    navbarMenu.classList.remove('open');
+
+
     console.log (event.target.dataset.link);
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior: "smooth"});
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+
 });
 
 // Handle click on "contact me" button on home
@@ -48,9 +59,13 @@ document.addEventListener('scroll', () => {
 });
 
 // Handle click on the "arrow up" button (go to the home)
-arrowUp.addEventListener('click', () =>{
-  
+arrowUp.addEventListener('click', () => {
+
     const scrollTo = document.querySelector('#home');
     scrollTo.scrollIntoView({behavior: "smooth"});
 });
 
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: 'smooth'});
+}
