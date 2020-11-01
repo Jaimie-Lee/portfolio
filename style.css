@@ -82,7 +82,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-dark-gray);
   margin: 8px 0;
@@ -332,7 +332,7 @@ p {
   top: 0;
   left: 0;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(15px);
   transition: all var(--animation-duration) ease-in;
 }
 
@@ -355,4 +355,21 @@ p {
   width: 25px;
   height: 2px;
   background-color: var(--color-dark-gray);
+}
+
+/* Contact */
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24 0;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-bg-dark);
 }
